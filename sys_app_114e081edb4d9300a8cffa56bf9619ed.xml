@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_app">
+    <sys_app action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <enforce_license>none</enforce_license>
+        <js_level>helsinki_es5</js_level>
+        <licensable>true</licensable>
+        <license_model>none</license_model>
+        <logo/>
+        <menu display_value="K18 Pod">d94e045edb4d9300a8cffa56bf96192f</menu>
+        <name>K18 Pod</name>
+        <private>false</private>
+        <restrict_table_access>false</restrict_table_access>
+        <runtime_access_tracking>permissive</runtime_access_tracking>
+        <scope>x_snc_k18_pod</scope>
+        <scoped_administration>false</scoped_administration>
+        <short_description/>
+        <source>x_snc_k18_pod</source>
+        <store_correlation_id/>
+        <store_url/>
+        <sys_class_name>sys_app</sys_class_name>
+        <sys_code/>
+        <sys_created_by>alex</sys_created_by>
+        <sys_created_on>2018-03-26 16:16:28</sys_created_on>
+        <sys_id>114e081edb4d9300a8cffa56bf9619ed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>alex</sys_updated_by>
+        <sys_updated_on>2018-03-26 16:16:28</sys_updated_on>
+        <template/>
+        <trackable>true</trackable>
+        <user_role display_value="x_snc_k18_pod.user" name="x_snc_k18_pod.user">254e045edb4d9300a8cffa56bf961933</user_role>
+        <vendor/>
+        <vendor_prefix/>
+        <version>1.0.0</version>
+    </sys_app>
+</record_update>
