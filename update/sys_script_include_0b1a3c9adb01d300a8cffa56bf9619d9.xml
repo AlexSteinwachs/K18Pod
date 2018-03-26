@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_k18_pod.loadTrackers</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>loadTrackers</name>
+        <script><![CDATA[function loadTrackers(trackerArray){
+	var dt = new GlideRecord("x_snc_k18_pod_completion_tracker");
+	dt.deleteMultiple();
+	
+	trackerArray.forEach(function(tracker){
+		var tr = new GlideRecord('x_snc_k18_pod_completion_tracker');
+		tr.description=tracker.description;
+		tr.module_name=tracker.module_name;
+		tr.state='not_complete';
+		tr.insert();
+	}
+	);
+	
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>alex</sys_created_by>
+        <sys_created_on>2018-03-26 19:28:35</sys_created_on>
+        <sys_id>0b1a3c9adb01d300a8cffa56bf9619d9</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>loadTrackers</sys_name>
+        <sys_package display_value="K18 Pod" source="x_snc_k18_pod">114e081edb4d9300a8cffa56bf9619ed</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="K18 Pod">114e081edb4d9300a8cffa56bf9619ed</sys_scope>
+        <sys_update_name>sys_script_include_0b1a3c9adb01d300a8cffa56bf9619d9</sys_update_name>
+        <sys_updated_by>alex</sys_updated_by>
+        <sys_updated_on>2018-03-26 19:42:16</sys_updated_on>
+    </sys_script_include>
+</record_update>

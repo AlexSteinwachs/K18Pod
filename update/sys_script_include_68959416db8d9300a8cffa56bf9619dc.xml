@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_k18_pod.checkin</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>checkin</name>
+        <script><![CDATA[function checkin(){
+	 var r = new sn_ws.RESTMessageV2('x_snc_k18_pod.Mission Control', 'checkin');
+ r.setStringParameterNoEscape('complete', x_snc_k18_pod.checkComplete());
+ r.setStringParameterNoEscape('url', gs.getProperty('x_snc_k18_pod.master_url'));
+ r.setStringParameterNoEscape('sys_id', gs.getProperty('x_snc_k18_pod.crew_sys_id'));
+
+ var response = r.execute();
+ var responseBody = response.getBody();
+ var httpStatus = response.getStatusCode();
+if(httpStatus!=200){
+		responseBody = JSON.parse(responseBody);
+		return responseBody.error.message+' '+ responseBody.error.detail;
+	} else {
+		responseBody = JSON.parse(responseBody);
+		
+		return responseBody;
+	}
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>alex</sys_created_by>
+        <sys_created_on>2018-03-26 18:56:32</sys_created_on>
+        <sys_id>68959416db8d9300a8cffa56bf9619dc</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>checkin</sys_name>
+        <sys_package display_value="K18 Pod" source="x_snc_k18_pod">114e081edb4d9300a8cffa56bf9619ed</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="K18 Pod">114e081edb4d9300a8cffa56bf9619ed</sys_scope>
+        <sys_update_name>sys_script_include_68959416db8d9300a8cffa56bf9619dc</sys_update_name>
+        <sys_updated_by>alex</sys_updated_by>
+        <sys_updated_on>2018-03-26 19:22:10</sys_updated_on>
+    </sys_script_include>
+</record_update>

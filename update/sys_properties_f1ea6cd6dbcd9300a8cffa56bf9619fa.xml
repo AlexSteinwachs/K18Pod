@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>URL for control center</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_snc_k18_pod.master_url</name>
+        <read_roles/>
+        <suffix>master_url</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>alex</sys_created_by>
+        <sys_created_on>2018-03-26 18:21:49</sys_created_on>
+        <sys_id>f1ea6cd6dbcd9300a8cffa56bf9619fa</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_snc_k18_pod.master_url</sys_name>
+        <sys_package display_value="K18 Pod" source="x_snc_k18_pod">114e081edb4d9300a8cffa56bf9619ed</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="K18 Pod">114e081edb4d9300a8cffa56bf9619ed</sys_scope>
+        <sys_update_name>sys_properties_f1ea6cd6dbcd9300a8cffa56bf9619fa</sys_update_name>
+        <sys_updated_by>alex</sys_updated_by>
+        <sys_updated_on>2018-03-26 19:06:16</sys_updated_on>
+        <type>string</type>
+        <value>asteisc1demo.service-now.com</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=f1ea6cd6dbcd9300a8cffa56bf9619fa"/>
+</record_update>

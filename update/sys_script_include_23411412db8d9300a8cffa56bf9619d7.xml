@@ -1,37 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update table="sys_script_include">
     <sys_script_include action="INSERT_OR_UPDATE">
-        <access>package_private</access>
+        <access>public</access>
         <active>true</active>
         <api_name>x_snc_k18_pod.load</api_name>
         <caller_access/>
         <client_callable>false</client_callable>
         <description/>
         <name>load</name>
-        <script><![CDATA[function load(){
-	 var r = new sn_ws.RESTMessageV2('x_snc_k18_pod.Mission Control', 'load');
- r.setStringParameterNoEscape('name', 'from Pod API');
- r.setStringParameterNoEscape('email', 'pod@email.co');
- r.setStringParameterNoEscape('url', gs.getProperty('mission_url'));
- r.setStringParameterNoEscape('pod', pod);
-
-
- var response = r.execute();
- var responseBody = response.getBody();
- var httpStatus = response.getStatusCode();
-	
+        <script><![CDATA[function load(name,email,pod){
+	var r = new sn_ws.RESTMessageV2('x_snc_k18_pod.Mission Control', 'load');
+	r.setStringParameterNoEscape('name', name);
+	r.setStringParameterNoEscape('email', email);
+	r.setStringParameterNoEscape('url', gs.getProperty('x_snc_k18_pod.master_url'));
+	r.setStringParameterNoEscape('pod', pod);
+	r.setStringParameterNoEscape('pod_url', gs.getProperty('glide.servlet.uri'));
+	var response = r.execute();
+	var responseBody = response.getBody();
+	var httpStatus = response.getStatusCode();
+	if(httpStatus!=200){
+		responseBody = JSON.parse(responseBody);
+		return responseBody.error.message+' '+ responseBody.error.detail;
+	} else {
+		responseBody = JSON.parse(responseBody);
+		gs.setProperty('x_snc_k18_pod.crew_sys_id',responseBody.result.sys_id);
+		return responseBody.result.sys_id;
+	}
 }]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>alex</sys_created_by>
         <sys_created_on>2018-03-26 16:31:19</sys_created_on>
         <sys_id>23411412db8d9300a8cffa56bf9619d7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>load</sys_name>
         <sys_package display_value="K18 Pod" source="x_snc_k18_pod">114e081edb4d9300a8cffa56bf9619ed</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="K18 Pod">114e081edb4d9300a8cffa56bf9619ed</sys_scope>
         <sys_update_name>sys_script_include_23411412db8d9300a8cffa56bf9619d7</sys_update_name>
         <sys_updated_by>alex</sys_updated_by>
-        <sys_updated_on>2018-03-26 16:31:19</sys_updated_on>
+        <sys_updated_on>2018-03-26 19:20:58</sys_updated_on>
     </sys_script_include>
 </record_update>
