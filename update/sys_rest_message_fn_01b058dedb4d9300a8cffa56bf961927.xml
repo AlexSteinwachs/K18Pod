@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>inherit_from_parent</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content>{&#13;
+"sys_id":"${sys_id}",&#13;
+"complete":"${complete}"&#13;
+}</content>
+        <function_name>checkin</function_name>
+        <http_method>post</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>Mission Control [ checkin ]</qualified_name>
+        <rest_endpoint>https://${url}/api/x_snc_k18_mars/crew/checkin</rest_endpoint>
+        <rest_message display_value="Mission Control">314fc09edb4d9300a8cffa56bf96193b</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>alex</sys_created_by>
+        <sys_created_on>2018-03-26 16:28:00</sys_created_on>
+        <sys_id>01b058dedb4d9300a8cffa56bf961927</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>checkin</sys_name>
+        <sys_package display_value="K18 Pod" source="x_snc_k18_pod">114e081edb4d9300a8cffa56bf9619ed</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="K18 Pod">114e081edb4d9300a8cffa56bf9619ed</sys_scope>
+        <sys_update_name>sys_rest_message_fn_01b058dedb4d9300a8cffa56bf961927</sys_update_name>
+        <sys_updated_by>alex</sys_updated_by>
+        <sys_updated_on>2018-03-26 16:28:00</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>
