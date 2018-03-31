@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_container">
+    <sp_container action="INSERT_OR_UPDATE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>pod - Container 1</name>
+        <order>1</order>
+        <sp_page display_value="pod">e15bda56db85d300a8cffa56bf96195d</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>alex</sys_created_by>
+        <sys_created_on>2018-03-27 02:32:47</sys_created_on>
+        <sys_id>295bda56db85d300a8cffa56bf96195f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>pod - Container 1</sys_name>
+        <sys_package display_value="K18 Pod" source="x_snc_k18_pod">114e081edb4d9300a8cffa56bf9619ed</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="K18 Pod">114e081edb4d9300a8cffa56bf9619ed</sys_scope>
+        <sys_update_name>sp_container_295bda56db85d300a8cffa56bf96195f</sys_update_name>
+        <sys_updated_by>alex</sys_updated_by>
+        <sys_updated_on>2018-03-27 02:32:47</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+</record_update>
